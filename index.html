@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tree Survey</title>
+    <style></style>
+  </head>
+
+  <body>
+    <h1>Tree Survey Form</h1>
+    <h2>A survey sorm on the health of the environment</h2>
+
+    <form action="submit">
+      <label for="nam">Name:</label>
+      <input type="text" id="nam" name="fulname" required />
+      <br />
+      <br />
+      <label for="email">Email: </label>
+      <input type="email" name="Email" id="email" />
+      <br />
+      <br />
+      <label for="cntno">Age(Optional):</label>
+      <input type="number" name="Tel" id="cntno" />
+      <br />
+      <br />
+      <label><h2>Select continent of residence</h2></label>
+      <select multiple>
+        <option value="afric">Africa</option>
+        <option value="asia">Asia</option>
+        <option value="aus">Australia</option>
+        <option value="noram">North America</option>
+        <option value="soam">South America</option>
+      </select>
+      <br />
+      <br />
+      <h2>Choose Your preferred gender</h2>
+      <label for="gender"></label>
+      <input type="radio" id="male" name="gender" /> Male<br />
+      <input type="radio" id="female" name="gender" /> Female<br />
+      <input type="radio" id="other" name="gender" /> Other
+      <br />
+      <br />
+      <h2>Please select at least one of the options below:</h2>
+      <input type="checkbox" id="environment" name="checkbox" />
+      <label for="checkbox">I have planted a tree or any other plant </label
+      ><br />
+      <input type="checkbox" id="tree" name="checkbox" />
+      <label for="checkbox"
+        >I take part in commuinty service for the environment </label
+      ><br />
+      <input type="checkbox" id="plant" name="checkbox" />
+      <label for="checkbox">I promise to plant more from now on </label><br />
+      <br />
+      <h2>Any comments or suggestions</h2>
+      <textarea
+        name="txtarea"
+        id="txta"
+        cols="40"
+        rows="20"
+        placeholder="Comments/Suggestions...."
+      ></textarea>
+
+      <br />
+      <br />
+      <button name="button" type="submit">Submit Form</button>
+    </form>
+  </body>
+</html>
