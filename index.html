@@ -5,66 +5,167 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tree Survey</title>
-    <style></style>
+
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        overflow-x: hidden;
+        min-height: 100%;
+        background-image: url(greattree.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        overflow-y: auto;
+        background-attachment: fixed;
+      }
+
+      div {
+        position: absolute;
+        /* top: 10px;*/
+        border: hidden;
+        border-radius: 10px;
+        left: 300px;
+        padding-left: 50px;
+        width: 50%;
+        background-image: url(greattree.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-attachment: scroll;
+      }
+      #logo {
+        position: absolute;
+        top: 0px;
+        left: 3px;
+      }
+
+      .blck {
+        width: 700px;
+        display: block;
+        border-radius: 4px;
+        height: 25px;
+      }
+      .btn {
+        background-color: green;
+        width: 450px;
+        height: 30px;
+        border-radius: 4px;
+        position: relative;
+        left: 100px;
+        margin-bottom: 20px;
+        color: white;
+      }
+      .btn:hover {
+        color: purple;
+        width: 600px;
+      }
+      .txtarea {
+        border-radius: 5px;
+      }
+
+      label {
+        color: white;
+      }
+      h1 {
+        color: white;
+        align-content: center;
+        position: relative;
+        left: 200px;
+      }
+
+      h2,
+      h3 {
+        color: white;
+        align-content: center;
+        position: relative;
+        left: 100px;
+      }
+      .gender {
+        color: white;
+      }
+    </style>
   </head>
 
   <body>
-    <h1>Tree Survey Form</h1>
-    <h2>A survey sorm on the health of the environment</h2>
+    <div>
+      <img id="logo" src="tree.png" alt="Oak tree" />
+      <h1>Tree Survey Form</h1>
+      <h2>A survey form on the health of the environment</h2>
 
-    <form action="submit">
-      <label for="nam">Name:</label>
-      <input type="text" id="nam" name="fulname" required />
-      <br />
-      <br />
-      <label for="email">Email: </label>
-      <input type="email" name="Email" id="email" />
-      <br />
-      <br />
-      <label for="cntno">Age(Optional):</label>
-      <input type="number" name="Tel" id="cntno" />
-      <br />
-      <br />
-      <label><h2>Select continent of residence</h2></label>
-      <select multiple>
-        <option value="afric">Africa</option>
-        <option value="asia">Asia</option>
-        <option value="aus">Australia</option>
-        <option value="noram">North America</option>
-        <option value="soam">South America</option>
-      </select>
-      <br />
-      <br />
-      <h2>Choose Your preferred gender</h2>
-      <label for="gender"></label>
-      <input type="radio" id="male" name="gender" /> Male<br />
-      <input type="radio" id="female" name="gender" /> Female<br />
-      <input type="radio" id="other" name="gender" /> Other
-      <br />
-      <br />
-      <h2>Please select at least one of the options below:</h2>
-      <input type="checkbox" id="environment" name="checkbox" />
-      <label for="checkbox">I have planted a tree or any other plant </label
-      ><br />
-      <input type="checkbox" id="tree" name="checkbox" />
-      <label for="checkbox"
-        >I take part in commuinty service for the environment </label
-      ><br />
-      <input type="checkbox" id="plant" name="checkbox" />
-      <label for="checkbox">I promise to plant more from now on </label><br />
-      <br />
-      <h2>Any comments or suggestions</h2>
-      <textarea
-        name="txtarea"
-        id="txta"
-        cols="40"
-        rows="20"
-        placeholder="Comments/Suggestions...."
-      ></textarea>
+      <form action="submit">
+        <label for="nam">Name:</label>
+        <input
+          class="blck"
+          type="text"
+          id="nam"
+          name="fulname"
+          placeholder="Enter your name e.g  John Doe"
+        />
+        <br />
+        <br />
+        <label for="email">Email: </label>
+        <input
+          class="blck"
+          type="email"
+          name="Email"
+          id="email"
+          placeholder="xyx@someplace.com"
+        />
+        <br />
+        <br />
+        <label for="age">Age(Optional):</label>
+        <input class="blck" type="number" name="age" id="age" />
+        <br />
+        <br />
+        <label><h3>Select continent of residence</h3></label>
+        <select class="blck">
+          <option value="afric">Africa</option>
+          <option value="asia">Asia</option>
+          <option value="aus">Australia</option>
+          <option value="noram">North America</option>
+          <option value="soam">South America</option>
+        </select>
+        <br />
+        <br />
+        <label for=""><h3>Choose Your preferred gender</h3></label>
+        <input type="radio" id="other" name="gender" />
+        <label for="gender" class="gender"> Male</label> <br />
+        <input type="radio" id="male" name="gender" />
+        <label for="gender" class="gender">Female</label> <br />
+        <input type="radio" id="female" name="gender" />
+        <label for="gender" class="gender"> Other</label>
 
-      <br />
-      <br />
-      <button name="button" type="submit">Submit Form</button>
-    </form>
+        <br />
+        <br />
+        <label for=""
+          ><h3>Please select at least one of the options below:</h3></label
+        >
+        <input type="checkbox" id="environment" name="checkbox" />
+        <label for="checkbox">I have planted a tree or any other plant </label
+        ><br />
+        <input type="checkbox" id="tree" name="checkbox" />
+        <label for="checkbox"
+          >I take part in community service for the environment </label
+        ><br />
+        <input type="checkbox" id="plant" name="checkbox" />
+        <label for="checkbox">I promise to plant more from now on </label><br />
+        <br />
+        <label for="textarea"><h3>Any comments or suggestions</h3></label>
+        <textarea
+          class="txtarea"
+          name="textarea"
+          cols="90"
+          rows="20"
+          placeholder="Comments/Suggestions...."
+        ></textarea>
+        <br />
+        <br />
+        <button name="button" type="submit" class="btn">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
