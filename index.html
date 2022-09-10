@@ -10,7 +10,6 @@
       body {
         width: 100%;
         height: 100%;
-        opacity: 1;
         overflow-x: hidden;
         min-height: 100%;
         background-image: url(greattree.jpg);
@@ -23,19 +22,12 @@
 
       div {
         position: absolute;
-        /* top: 10px;*/
         border: hidden;
         border-radius: 10px;
         left: 300px;
         padding-left: 50px;
         width: 50%;
-        background-image: url(greattree.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        overflow-y: hidden;
-        overflow-x: hidden;
-        background-attachment: scroll;
+        background-color: rgba(123, 187, 59, 0.65);
       }
       #logo {
         position: absolute;
@@ -43,28 +35,30 @@
         left: 3px;
       }
 
-      .blck {
-        width: 700px;
+      .input-field {
+        width: 80%;
+        border: 20px;
         display: block;
         border-radius: 4px;
         height: 25px;
       }
       .btn {
         background-color: green;
-        width: 450px;
+        width: 80%;
         height: 30px;
+
         border-radius: 4px;
         position: relative;
-        left: 100px;
+
         margin-bottom: 20px;
         color: white;
       }
       .btn:hover {
         color: purple;
-        width: 600px;
       }
       .txtarea {
         border-radius: 5px;
+        width: 80%;
       }
 
       label {
@@ -99,7 +93,7 @@
       <form action="submit">
         <label for="nam">Name:</label>
         <input
-          class="blck"
+          class="input-field"
           type="text"
           id="nam"
           name="fulname"
@@ -109,7 +103,7 @@
         <br />
         <label for="email">Email: </label>
         <input
-          class="blck"
+          class="input-field"
           type="email"
           name="Email"
           id="email"
@@ -118,11 +112,11 @@
         <br />
         <br />
         <label for="age">Age(Optional):</label>
-        <input class="blck" type="number" name="age" id="age" />
+        <input class="input-field" type="number" name="age" id="age" />
         <br />
         <br />
         <label><h3>Select continent of residence</h3></label>
-        <select class="blck">
+        <select class="input-field">
           <option value="afric">Africa</option>
           <option value="asia">Asia</option>
           <option value="aus">Australia</option>
